@@ -34,8 +34,8 @@ div i:last-of-type{
 
 
 div.status{
-    width: 200px;
-    padding: 0.5rem;
+
+    padding: 0.5rem 1rem;
     background-color: rgba(236, 235, 235, 0.233);
     position: absolute;
     border-radius: 2rem;
@@ -53,6 +53,7 @@ div.status{
     height: 20px;
     line-height: 20px;
     border-radius: 20px;
+    margin:0 10px;
   border:none;
 
 }
