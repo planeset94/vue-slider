@@ -48,11 +48,15 @@ div.status{
 
 }
 
-div.circ{
+.circ{
     width: 20px;
     height: 20px;
     line-height: 20px;
     border-radius: 20px;
-    background-color: white;
+  border:none;
 
+}
+
+button.active{
+    background-color: red;
 }

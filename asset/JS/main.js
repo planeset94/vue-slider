@@ -34,9 +34,16 @@ const app = new Vue({
             return this.counter += 1
 
         },
-        A() {
-            return this.counter == 0;
-        }
+
+
+        checkCirc(index) {
+            return this.counter = index;
+        },
+
+
+
+
+
 
     },
     // mounted() {
@@ -44,26 +51,9 @@ const app = new Vue({
     // }
 });
 
-let prevEl = document.querySelector('.prev');
-let nextEl = document.querySelector('.next');
-let circEl = document.querySelectorAll('.circ');
-let photoEl = document.getElementById('photo');
-
-function statusFunction() {
-    circEl.forEach(circ => {
-        if (circ.getAttribute('data-number') == app.counter) {
-            circ.style.backgroundColor = "red";
-        } else {
-            circ.style.backgroundColor = "white";
-        }
-
-    })
-
-};
 //Verifica quale tasto è stato cliccato e chiede alla pagina di muovere le img a destra o sinistra
 function verificaTasto(e) {
     if (e.keyCode = '37') {
-        statusFunction();
         app.prev();
     } else if (e.keyCode = '39') {
         app.next();
@@ -72,12 +62,5 @@ function verificaTasto(e) {
 
 };
 
-//Al refresh della pagina, colora di rosso il primo cerchio.
-window.onload = circEl[0].style.backgroundColor = "red";
-prevEl.addEventListener('click', statusFunction);
-nextEl.addEventListener('click', statusFunction);
 document.addEventListener('keyup', verificaTasto);
-
-
-
 

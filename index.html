@@ -29,10 +29,8 @@
 
 
         <div class="status">
-            <div class="circ" @click="A" data-number="0"></div>
-            <div class="circ" data-number="1"></div>
-            <div class="circ" data-number="2"></div>
-            <div class="circ" data-number="3"></div>
+            <button v-for="(item,index) in images" @click="checkCirc(index)" class="circ"
+                :class="(index==counter)? 'active':'' "></button>
         </div>
 
 
