@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Slider</title>
+
+</head>
+
+
+<body>
+
+    <div id="app" class="container">
+        <div class="prev">
+            <i @click="prev" class="fas fa-chevron-left"></i>
+        </div>
+        <img id="photo" v-bind:src="images[counter]" alt="Nebulosa's images">
+
+        <div class="next">
+            <i @click="next" class="fas fa-chevron-right"></i>
+        </div>
+
+
+
+        <div class="status">
+            <div class="circ" data-number="0"></div>
+            <div class="circ" data-number="1"></div>
+            <div class="circ" data-number="2"></div>
+            <div class="circ" data-number="3"></div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./asset/JS/main.js"></script>
+</body>
+
+</html>
