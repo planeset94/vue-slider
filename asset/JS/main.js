@@ -58,20 +58,22 @@ function statusFunction() {
 
 };
 
+function verificaTasto(e) {
+    if (e.keyCode = '37') {
+        statusFunction();
+        app.prev();
+    } else if (e.keyCode = '39') {
+        app.next();
+
+    }
+
+};
+
+//Al refresh della pagina, colora di rosso il primo cerchio.
+window.onload = circEl[0].style.backgroundColor = "red";
 prevEl.addEventListener('click', statusFunction);
 nextEl.addEventListener('click', statusFunction);
-
-/*
-circEl.addEventListener('click', () => {
-
-    circEl.forEach(circ => {
-        if (circ.getAttribute('data-number') == 0) {
-            return app.counter = 0
-        }
-    })
+document.addEventListener('keyup', verificaTasto);
 
 
 
-});
-
-*/
