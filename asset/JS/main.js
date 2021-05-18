@@ -33,6 +33,9 @@ const app = new Vue({
             }
             return this.counter += 1
 
+        },
+        A() {
+            return this.counter == 0;
         }
 
     },
@@ -57,7 +60,7 @@ function statusFunction() {
     })
 
 };
-
+//Verifica quale tasto è stato cliccato e chiede alla pagina di muovere le img a destra o sinistra
 function verificaTasto(e) {
     if (e.keyCode = '37') {
         statusFunction();
@@ -74,6 +77,7 @@ window.onload = circEl[0].style.backgroundColor = "red";
 prevEl.addEventListener('click', statusFunction);
 nextEl.addEventListener('click', statusFunction);
 document.addEventListener('keyup', verificaTasto);
+
 
 
 
